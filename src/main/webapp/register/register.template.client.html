@@ -1,40 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Title</title>
-        <link href="../css/styles.css" rel="stylesheet"/>
-    </head>
-    <body>
-    <a href="../index.html">
-        Home
-    </a>
-        <h1>Sign Up</h1>
-
-        <div>
-        Username    <input/>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="./register.style.client.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sign Up</h1>
+      <form>
+        <div class="form-group row">
+          <label
+            for="username-field"
+            class="col-sm-2 col-form-label"
+            id="username-header"
+          >
+            Username</label
+          >
+          <div class="col-sm-10">
+            <input
+              class="form-control wbdv-field wbdv-username"
+              id="username-field"
+              placeholder="Alice"
+            />
+          </div>
         </div>
 
-        <div>
-            Password    <input/>
+        <div class="form-group row">
+          <label
+            for="password-field"
+            class="col-sm-2 col-form-label"
+            id="password-header"
+          >
+            Password</label
+          >
+          <div class="col-sm-10">
+            <input
+              class="form-control wbdv-field wbdv-password"
+              id="password-field"
+              type="password"
+              placeholder="123qwe#$%"
+            />
+          </div>
         </div>
 
-        <div>
-            Verify Password    <input/>
+        <div class="form-group row">
+          <label
+            for="confirm-password-field"
+            class="col-sm-2 col-form-label"
+            id="confirm-password-header"
+          >
+            Confirm Password</label
+          >
+          <div class="col-sm-10">
+            <input
+              class="form-control wbdv-field wbdv-password-verify"
+              id="confirm-password-field"
+              type="password"
+              placeholder="123qwe#$%"
+            />
+          </div>
         </div>
 
-        <div>
-            <button>
-                Sign Up
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label"></label>
+          <div class="col-sm-10">
+            <button class="btn btn-primary btn-block wbdv-register wbdv-button">
+              Sign up
             </button>
+            <a
+              href="../login/login.template.client.html"
+              class="wbdv-link wbdv-login"
+              >Sign in</a
+            >
+          </div>
         </div>
-
-        Forgot Password
-
-
-
-        <a href="../login/login.template.client.html">
-            Sign In
-        </a>
-    </body>
+      </form>
+    </div>
+  </body>
 </html>
