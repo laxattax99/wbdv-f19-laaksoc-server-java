@@ -18,62 +18,42 @@
   </head>
   <body>
     <div class="container-fluid">
-      <!-- <h1 class="wbdv-sticky-header wbdv-label wbdv-course-manager">
-        <i class="fas fa-bars wbdv-field wbdv-hamburger"></i>
-        Course Manager
-        <input
-          name="NewCourseTitleField"
-          id="NewCourseTitleField"
-          placeholder="New Course Title"
-          class="wbdv-field wbdv-new-course"
-        />
-        <a href="">
-          <i
-            class="wbdv-color-red fas fa-2x fa-plus-circle wbdv-button wbdv-add-course"
-          ></i>
-        </a>
-        <a href="#">
-          <i
-            class="wbdv-stuck-bottom-right wbdv-color-red fas fa-2x fa-plus-circle wbdv-button wbdv-add-course"
-          ></i>
-        </a>
-      </h1> -->
-
-      <!-- <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-        <h1 class="navbar-brand" href="#">Course Manager</h1>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <form class="form-inline my-4 my-lg-0">
-            <input class="form-control mr-sm-4" type="search" placeholder="New Course Title" aria-label="Search">
-            <i class="wbdv-color-red fas fa-2x fa-plus-circle"></i>
-          </form>
-        </div>
-      </nav> -->
-
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="#">Navbar</a>
-        <form class="form-inline my-4 my-lg-0 ml-auto">
+      <nav class="navbar navbar-light bg-light fixed-top">
+        <span>
+          <button
+            class="navbar-toggler wbdv-field wbdv-hamburger"
+            type="button"
+            data-toggle="collapse"
+            data-target="#collapsingNavbar1"
+          >
+            ☰
+          </button>
+          <a class="navbar-brand wbdv-label wbdv-course-manager" href="#"
+            >Course Manager</a
+          >
+        </span>
+        <form class="form-inline">
           <input
-            class="form-control mr-sm-4"
+            class="form-control mr-sm-2 wbdv-field wbdv-new-course"
             type="search"
             placeholder="New Course Title"
             aria-label="Search"
           />
-          <i class="wbdv-color-red fas fa-2x fa-plus-circle"></i>
+          <button
+            class="btn btn-outline-success my-2 my-sm-0 wbdv-button wbdv-add-course"
+            type="submit"
+          >
+            Add Course
+          </button>
         </form>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li><a href="#">Profile</a></li>
+        <div class="navbar-collapse collapse" id="collapsingNavbar1">
+          <ul class="nav navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -84,6 +64,13 @@
             <th class="wbdv-header wbdv-title">Title</th>
             <th class="wbdv-header wbdv-owner">Owner</th>
             <th class="wbdv-header wbdv-last-modified">Last Modified</th>
+            <th>
+              <a href="#" class="wbdv-button wbdv-grid-layout">
+                <i class="fas fa-th-large" style="color: rgb(128, 128, 128);"></i></th>
+              </a>
+            <th><a href="#" class="wbdv-header wbdv-sort">
+              <i class="fas fa-sort-alpha-up-alt" style="color: rgb(128, 128, 128);"></i></th>
+            </a></th>
             <th></th>
           </tr>
         </thead>
@@ -100,6 +87,8 @@
             </td>
             <td class="wbdv-row wbdv-owner">Jose</td>
             <td class="wbdv-row wbdv-modified-date">10:05am</td>
+            <td></td>
+            <td></td>
             <td>
               <a
                 href="#"
@@ -119,6 +108,8 @@
             </td>
             <td class="wbdv-row wbdv-owner">Jose</td>
             <td class="wbdv-row wbdv-modified-date">10:05am</td>
+            <td></td>
+            <td></td>
             <td>
               <a
                 href="#"
@@ -138,6 +129,8 @@
             </td>
             <td class="wbdv-row wbdv-owner">Jose</td>
             <td class="wbdv-row wbdv-modified-date">10:05am</td>
+            <td></td>
+            <td></td>
             <td>
               <a
                 href="#"
@@ -157,6 +150,8 @@
             </td>
             <td class="wbdv-row wbdv-owner">Jose</td>
             <td class="wbdv-row wbdv-modified-date">10:05am</td>
+            <td></td>
+            <td></td>
             <td>
               <a
                 href="#"
@@ -176,6 +171,8 @@
             </td>
             <td class="wbdv-row wbdv-owner">Jose</td>
             <td class="wbdv-row wbdv-modified-date">10:05am</td>
+            <td></td>
+            <td></td>
             <td>
               <a
                 href="#"
@@ -195,6 +192,8 @@
             </td>
             <td class="wbdv-row wbdv-owner">Jose</td>
             <td class="wbdv-row wbdv-modified-date">10:05am</td>
+            <td></td>
+            <td></td>
             <td>
               <a
                 href="#"
@@ -214,6 +213,8 @@
             </td>
             <td class="wbdv-row wbdv-owner">Jose</td>
             <td class="wbdv-row wbdv-modified-date">10:05am</td>
+            <td></td>
+            <td></td>
             <td>
               <a
                 href="#"
@@ -233,6 +234,8 @@
             </td>
             <td class="wbdv-row wbdv-owner">Jose</td>
             <td class="wbdv-row wbdv-modified-date">10:05am</td>
+            <td></td>
+            <td></td>
             <td>
               <a
                 href="#"
@@ -252,6 +255,8 @@
             </td>
             <td class="wbdv-row wbdv-owner">Jose</td>
             <td class="wbdv-row wbdv-modified-date">10:05am</td>
+            <td></td>
+            <td></td>
             <td>
               <a
                 href="#"
@@ -271,6 +276,8 @@
             </td>
             <td class="wbdv-row wbdv-owner">Jose</td>
             <td class="wbdv-row wbdv-modified-date">10:05am</td>
+            <td></td>
+            <td></td>
             <td>
               <a
                 href="#"
@@ -290,6 +297,8 @@
             </td>
             <td class="wbdv-row wbdv-owner">Jose</td>
             <td class="wbdv-row wbdv-modified-date">10:05am</td>
+            <td></td>
+            <td></td>
             <td>
               <a
                 href="#"
@@ -309,6 +318,8 @@
             </td>
             <td class="wbdv-row wbdv-owner">Jose</td>
             <td class="wbdv-row wbdv-modified-date">10:05am</td>
+            <td></td>
+            <td></td>
             <td>
               <a
                 href="#"
@@ -328,6 +339,8 @@
             </td>
             <td class="wbdv-row wbdv-owner">Jose</td>
             <td class="wbdv-row wbdv-modified-date">10:05am</td>
+            <td></td>
+            <td></td>
             <td>
               <a
                 href="#"
@@ -347,6 +360,8 @@
             </td>
             <td class="wbdv-row wbdv-owner">Jose</td>
             <td class="wbdv-row wbdv-modified-date">10:05am</td>
+            <td></td>
+            <td></td>
             <td>
               <a
                 href="#"
@@ -366,6 +381,8 @@
             </td>
             <td class="wbdv-row wbdv-owner">Jose</td>
             <td class="wbdv-row wbdv-modified-date">10:05am</td>
+            <td></td>
+            <td></td>
             <td>
               <a
                 href="#"
@@ -385,6 +402,8 @@
             </td>
             <td class="wbdv-row wbdv-owner">Jose</td>
             <td class="wbdv-row wbdv-modified-date">10:05am</td>
+            <td></td>
+            <td></td>
             <td>
               <a
                 href="#"
@@ -394,6 +413,9 @@
           </tr>
         </tbody>
       </table>
+      <button class="btn wbdv-button wbdv-add-course wbdv-stuck-bottom-right">
+        <i class="fas fa-plus-square fa-2x" style="color: rgb(0, 96, 240)"></i>
+      </button>
     </div>
   </body>
 </html>
