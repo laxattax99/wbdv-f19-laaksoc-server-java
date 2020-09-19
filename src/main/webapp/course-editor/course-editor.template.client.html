@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link href="../css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./course-editor.template.client.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="wbdv-course-title">
+          <a href="#" class="wbdv-course-editor wbdv-close">
+              <i class="fas fa-times"></i>
+          </a>
+        Course Title
+      </h1>
+
+      <div class="row">
+        <div class="col-4">
+          <ul class="list-group wbdv-module-list">
+            <li class="list-group-item wbdv-module-item wbdv-module-item-title">
+              Module 1 
+              <a href="#" class="fas fa-times float-right wbdv-module-item-delete-btn"></a>
+            </li>
+            <li class="list-group-item wbdv-module-item wbdv-module-item-title">
+              Module 2  
+              <a href="#" class="fas fa-times float-right wbdv-module-item-delete-btn"></a>
+            </li>
+            <li class="list-group-item active wbdv-module-item wbdv-module-item-title">
+              Module 3  
+              <a href="#" class="fas fa-times float-right wbdv-module-item-delete-btn"></a>
+            </li>
+            <li class="list-group-item wbdv-module-item wbdv-module-item-title">
+              Module 4  
+              <a href="#" class="fas fa-times float-right wbdv-module-item-delete-btn"></a>
+            </li>
+            <li class="list-group-item wbdv-module-item wbdv-module-item-title">
+              Module 5  
+              <a href="#" class="fas fa-times float-right wbdv-module-item-delete-btn"></a>
+            </li>
+            <li class="list-group-item wbdv-module-item wbdv-module-item-title">
+              Module 6  
+              <a href="#" class="fas fa-times float-right wbdv-module-item-delete-btn"></a>
+            </li>
+          </ul>
+          <button class="wbdv-module-item-add-btn">Add module</button>
+        </div>
+        
+        <div class="col-8">
+          <ul class="nav nav-tabs wbdv-lesson-tabs">
+            <li class="nav-item">
+              <a href="#" class="nav-link">Lesson 1</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link active">Lesson 2</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Lesson 3</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Lesson 4</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Lesson 5</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Lesson 1</a>
+            </li>
+          </ul>
+
+          <button class="wbdv-lesson-add-btn">New Lesson</button>
+
+          <br />
+
+          <ul class="nav nav-pills wbdv-topic-pill-list">
+            <li class="nav-item wbdv-topic-pill">
+              <a href="#" class="nav-link">Topic 1</a>
+            </li>
+            <li class="nav-item wbdv-topic-pill">
+              <a href="#" class="nav-link active">Topic 2</a>
+            </li>
+            <li class="nav-item wbdv-topic-pill">
+              <a href="#" class="nav-link">Topic 3</a>
+            </li>
+            <li class="nav-item wbdv-topic-pill">
+              <a href="#" class="nav-link">Topic 4</a>
+            </li>
+            <li class="nav-item wbdv-topic-pill">
+              <a href="#" class="nav-link">Topic 5</a>
+            </li>
+            <li class="nav-item wbdv-topic-pill">
+              <a href="#" class="nav-link">Topic 1</a>
+            </li>
+          </ul>
+          <button class="wbdv-topic-add-btn">Add Topic</button>
+
+          <br />
+
+          <div class="container">
+            <h3>
+              Heading Widget
+              <span class="float-right">
+                <a class="btn btn-warning">
+                  <i class="fas fa-arrow-up"></i>
+                </a>
+                <a class="btn btn-warning">
+                  <i class="fas fa-arrow-down"></i>
+                </a>
+                <select>
+                  <option>Heading</option>
+                  <option>YouTube</option>
+                  <option>Image</option>
+                  <option>Document</option>
+                  <option>Slides</option>
+                </select>
+                <a class="btn btn-danger">Delete</a>
+              </span>
+              <a href="#">
+                <i
+                  class="wbdv-stuck-bottom-right wbdv-color-red fas fa-2x fa-plus-circle wbdv-button wbdv-add-course"
+                ></i>
+            </h3>
+
+            <input class="form-control" placeholder="Heading Text" />
+            <br />
+            <select class="form-control">
+              <option>Heading 1</option>
+              <option>Heading 2</option>
+              <option>Heading 3</option>
+              <option>Heading 4</option>
+              <option>Heading 5</option>
+            </select>
+            <br />
+            <input
+              class="form-control"
+              title="Name your widget"
+              placeholder="Widget Name"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
