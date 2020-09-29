@@ -11,7 +11,7 @@
       const userId = user._id
       userService.deleteUser(userId)
         .then(status => {
-          console.log(status)
+          // console.log(status)
           users.splice(index, 1)
           renderUsers(users)
         })
@@ -45,7 +45,7 @@
         $lastName.html(lName)
         const $role = $clone.find(".wbdv-role")
         $role.html(role)
-        userIdx = users.findIndex(u => u._id === userId)
+        const userIdx = users.findIndex(u => u._id === userId)
         const $removeBtn = $clone.find(".wbdv-remove")
         $removeBtn.click(() => deleteUser(userIdx))
         $clone.find(".wbdv-select").click(() => selectUser(userIdx))
@@ -73,8 +73,9 @@
       }
       userService.createUser(newUser)
         .then(actualInsertedUser => {
-          users.push(actualInsertedUser)
-          renderUsers(users)
+          // users.push(actualInsertedUser)
+          findAllUsers()
+          // renderUsers(users)
         })
     }
     
@@ -92,6 +93,12 @@
     }
 
     const findAllUsers = () => {
+         userService.findAllUsers()
+        .then(_users => {
+          // console.log(_users)
+          users = _users
+          renderUsers(users)
+        })
     }
     
     function main() {
@@ -108,12 +115,15 @@
       $(".wbdv-create").click(createUser)
       $(".wbdv-update").click(updateUser)
     
-      userService.findAllUsers()
-        .then(_users => {
-          console.log(_users)
-          users = _users
-          renderUsers(users)
-        })
+      // userService.findAllUsers()
+      //   .then(_users => {
+      //     console.log(_users)
+      //     users = _users
+      //     renderUsers(users)
+      //   })
+
+      findAllUsers()
+      // renderUsers(users)
     }
     
     jQuery(main)

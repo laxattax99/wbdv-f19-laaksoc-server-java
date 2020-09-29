@@ -26,5 +26,8 @@ const userService = {
         "content-type": "application/json"
       }
     })
+      .then(response => response.json()),
+  findUserById: (userId) =>
+    fetch(`${url}/${userId}`)
       .then(response => response.json())
 }
