@@ -1,9 +1,6 @@
 (function () {
   let users = [];
 
-  const onclickEventHandler = () => {
-    alert("heading clicked");
-  };
 
   const deleteUser = (index) => {
     const user = users[index];
@@ -147,7 +144,6 @@
     const heading1 = jQuery("h1");
     heading1
       .html("User Administration")
-      .click(onclickEventHandler);
 
     $template = jQuery(".wbdv-template");
     tbody = $("tbody.wbdv-tbody");
