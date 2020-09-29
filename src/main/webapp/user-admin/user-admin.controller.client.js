@@ -9,7 +9,6 @@
     const user = users[index];
     const userId = user._id;
     userService.deleteUser(userId).then((status) => {
-      // console.log(status)
       users.splice(index, 1);
       renderUsers(users);
     });
@@ -75,9 +74,7 @@
       password,
     };
     userService.createUser(newUser).then((actualInsertedUser) => {
-      // users.push(actualInsertedUser)
       findAllUsers();
-      // renderUsers(users)
     });
     clearForms();
   };
@@ -101,8 +98,6 @@
     const userId = users[selectedUserIndex]._id;
     userService.updateUser(userId, updatedFields).then((status) => {
       findAllUsers();
-      // users[selectedUserIndex] = updatedFields;
-      // renderUsers(users);
     });
     clearForms();
   };
@@ -150,11 +145,8 @@
 
   function main() {
     const heading1 = jQuery("h1");
-    // heading1.remove()
     heading1
-      // .css("backgroundColor", "blue")
       .html("User Administration")
-      // .append(" - for Administrators Only")
       .click(onclickEventHandler);
 
     $template = jQuery(".wbdv-template");
@@ -163,15 +155,7 @@
     $(".wbdv-update").click(updateUser);
     $(".wbdv-search").click(searchUser);
 
-    // userService.findAllUsers()
-    //   .then(_users => {
-    //     console.log(_users)
-    //     users = _users
-    //     renderUsers(users)
-    //   })
-
     findAllUsers();
-    // renderUsers(users)
   }
 
   jQuery(main);
