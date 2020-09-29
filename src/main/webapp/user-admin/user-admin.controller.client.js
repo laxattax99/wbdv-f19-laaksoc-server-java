@@ -66,17 +66,28 @@
     const first = $("#firstNameFld").val();
     const last = $("#lastNameFld").val();
     const role = $("#roleFld").val();
+    const password = $("#passwordFld").val()
     const newUser = {
       username,
       first,
       last,
       role,
+      password,
     };
     userService.createUser(newUser).then((actualInsertedUser) => {
       // users.push(actualInsertedUser)
       findAllUsers();
       // renderUsers(users)
     });
+    clearForms();
+  };
+
+  const clearForms = () => {
+    $("#usernameFld").val("");
+    $("#firstNameFld").val("");
+    $("#lastNameFld").val("");
+    $("#roleFld").val("");
+    $("#passwordFld").val("");
   };
 
   const updateUser = () => {
@@ -85,6 +96,7 @@
       first: $("#firstNameFld").val(),
       last: $("#lastNameFld").val(),
       role: $("#roleFld").val(),
+      password: $("passwordFld").val(),
     };
     const userId = users[selectedUserIndex]._id;
     userService.updateUser(userId, updatedFields).then((status) => {
@@ -92,6 +104,7 @@
       // users[selectedUserIndex] = updatedFields;
       // renderUsers(users);
     });
+    clearForms();
   };
 
   const findAllUsers = () => {
@@ -99,6 +112,12 @@
       console.log(_users);
       users = _users;
       renderUsers(users);
+    });
+  };
+
+  const findUserById = (userId) => {
+    userService.findUserById(userId).then(_user => {
+      console.log(_user);
     });
   };
 
@@ -111,12 +130,11 @@
     };
 
     if(!searchFields.username && !searchFields.first && !searchFields.last && !searchFields.role){
-      findAllUsers()
-      return
+      findAllUsers();
+      return;
     }
 
     const filteredUsers = users.filter((user) => {
-      console.log(user)
       if (
         user.username.includes(searchFields.username) &&
         user.first.includes(searchFields.first) &&
