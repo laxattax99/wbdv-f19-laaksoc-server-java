@@ -22,7 +22,8 @@ public class WidgetService {
     public Widget createWidget(String topicId, Widget widget) {
         String newId = UUID.randomUUID().toString().replace("-", "");
         widget.setId(newId);
-        widget.setWidgetOrder(widgetMap.size());
+        widget.setTopicId(topicId);
+        widget.setWidgetOrder(findWidgetsForTopic(topicId).size());
         widgetMap.put(newId, widget);
         return widget;
     }
