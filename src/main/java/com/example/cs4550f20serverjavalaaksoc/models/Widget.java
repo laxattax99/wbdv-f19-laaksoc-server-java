@@ -1,8 +1,14 @@
 package com.example.cs4550f20serverjavalaaksoc.models;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "widgets")
 public class Widget {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
     private String name;
-    private String id;
     private String type;
     private Integer widgetOrder;
     private String text;
@@ -14,14 +20,14 @@ public class Widget {
     private String style;
     private String value;
 
-    public Widget(String id, String type, String name, String topicId) {
+    public Widget(Integer id, String type, String name, String topicId) {
         this.id = id;
         this.type = type;
         this.name = name;
         this.topicId = topicId;
     }
 
-    public Widget(String id, String type, String name) {
+    public Widget(Integer id, String type, String name) {
         this.id = id;
         this.type = type;
         this.name = name;
@@ -48,11 +54,11 @@ public class Widget {
         this.name = name;
     }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
