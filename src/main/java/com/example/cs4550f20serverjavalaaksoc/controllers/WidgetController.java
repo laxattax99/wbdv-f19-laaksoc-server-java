@@ -35,7 +35,7 @@ public class WidgetController {
             @PathVariable("topicId") String topicId,
             @RequestBody Widget widget) {
         widget.setTopicId(topicId);
-        return widgetService.createWidget(widget);
+        return widgetService.createWidget(topicId, widget);
     }
 
     @DeleteMapping("/api/widgets/{wid}")

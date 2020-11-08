@@ -15,7 +15,8 @@ public class WidgetService {
     @Autowired
     WidgetRepository widgetRepository;
 
-    public Widget createWidget(Widget widget) {
+    public Widget createWidget(String topicId, Widget widget) {
+        widget.setWidgetOrder(widgetRepository.findWidgetsByTopicId(topicId).size());
         return widgetRepository.save(widget);
     }
 
